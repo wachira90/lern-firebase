@@ -5,8 +5,8 @@ async function getUsersWithEmailFilter() {
     // Firestore query: Limit to 10 results and filter for emails ending with '@example.com'
     const usersRef = db.collection('users');
     const snapshot = await usersRef
-      // .where('email', '>=', '@smartblocktech.ai')
-      // .where('email', '<=', '\uf8ff@smartblocktech.ai')
+      // .where('email', '>=', '@example.com')
+      // .where('email', '<=', '\uf8ff@example.com')
       .limit(10)
       .get();
 
