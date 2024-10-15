@@ -49,6 +49,8 @@ Now, let's create CRUD operations for Firestore in your Node.js app.
 
 2. **Read (Get a Document)**
    ```js
+   const db = require('./firebase');
+   
    async function getUser(id) {
      try {
        const user = await db.collection('users').doc(id).get();
@@ -67,6 +69,8 @@ Now, let's create CRUD operations for Firestore in your Node.js app.
 
 3. **Update (Modify a Document)**
    ```js
+   const db = require('./firebase');
+   
    async function updateUser(id, data) {
      try {
        await db.collection('users').doc(id).update(data);
@@ -81,6 +85,8 @@ Now, let's create CRUD operations for Firestore in your Node.js app.
 
 4. **Delete (Remove a Document)**
    ```js
+   const db = require('./firebase');
+   
    async function deleteUser(id) {
      try {
        await db.collection('users').doc(id).delete();
